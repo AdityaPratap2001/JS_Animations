@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  overflow-x: hidden;
+}
+
+/* PRELOADER */
+.preloader{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(175, 171, 171); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  transition: 5s;
+  color: #eee;
+  /* display: none; */
+}
+.preloader img{
+  height: 12vw;
+}
+.preloader h4{
+  margin-top: 2%;
+}
+.vanish{
+  animation: disappear 1.8s forwards;
+}
+@keyframes disappear{
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* Preloader ends */
+
+/* Cards section */
+.banner{
+  height: 100vh;
+  background-color: rgb(253, 91, 91);
+  color: black;
+  padding: 7% 10%;
+  padding-bottom: 2%;
+  overflow: hidden;
+}
+.banner h1{
+  font-size: 50px;
+}
+
+/* Cards end */
+
+@media (max-width:600px){
+  .preloader img{
+    height: 16vw;
+  }
+}
+@media (max-width:580px){
+  .banner h1{
+    font-size: 45px;
+  }
+}
+@media (max-width:521px){
+  .banner h1{
+    font-size: 40px
+  }
+  .banner h2{
+    font-size: 20px;
+  }
+}
+@media (max-width:521px){
+  .banner h1{
+    line-height: 7.8vh;
+  }
+}
