@@ -8,34 +8,57 @@ body{
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+.hidden{
+  display: none;
+}
 
 /* PRELOADER */
 .preloader{
-  height: 100vh;
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-  /* background-color: rgb(175, 171, 171); */
-  display: flex;
-  flex-direction: column;
+	height: 100vh;
+	width: 100%;
+	background-color: #204a61;
+	text-align: center;
+	display: flex;
+	align-content: center;
   justify-content: center;
-  align-items: center;
-  position: fixed;
-  transition: 5s;
-  color: #eee;
-  display: none;
 }
-.preloader img{
-  height: 12vw;
+.clouds{
+	position: absolute;
+	height: 100px;
+	right: 0%;
+	transform: translateX(180px);
 }
-.preloader h4{
-  margin-top: 2%;
+.cloud-1{
+	top: 20%;
+}
+.cloud-2{
+	top: 45%;
+	z-index: 0;
+}
+.cloud-3{
+	top:75%;
+}
+.preloader h3{
+	font-size: 30px;
+	position: absolute;
+	top: 75%;
+	transform: translateY(-75%);
+	left: auto;
+	align-content: center;
+	color: white;
+}
+.dragon{
+	height: 200px;
+	position:absolute;
+	z-index: 1;
+	top: 200px;
 }
 .vanish{
   animation: disappear 1.8s forwards;
 }
 @keyframes disappear{
   100%{
-    opacity: 0;
+    opacity: 0; 
     visibility: hidden;
   }
 }
@@ -85,26 +108,7 @@ body{
 .card_six{
   background-image: linear-gradient(45deg,#b1ea4d,#459522);
 }
-.card_anim{
-  animation: move 3s ease forwards;
-}
-.card_anim2{
-  animation: move2 3s ease forwards;
-}
-@keyframes move{
-  100%{
-    transform: translateX(120vw) translateY(-30vh);
-    opacity: 0;
-  }
-}
-@keyframes move2{
-  100%{
-    transform: translateX(60vw) translateY(-30vh);
-    opacity: 0;
-  }
-}
 /* Cards end */
-
 
 
 /* MEDIA QUERIES */
@@ -141,7 +145,6 @@ body{
     height: 45vh;
   }
 }
-
 @media (max-width:610px){
   .card_container{
     flex-direction: column;
