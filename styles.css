@@ -6,6 +6,7 @@
 }
 body{
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* PRELOADER */
@@ -21,7 +22,7 @@ body{
   position: fixed;
   transition: 5s;
   color: #eee;
-  /* display: none; */
+  display: none;
 }
 .preloader img{
   height: 12vw;
@@ -42,7 +43,7 @@ body{
 
 /* Cards section */
 .banner{
-  height: 100vh;
+  height: auto;
   background-color: rgb(253, 91, 91);
   color: black;
   padding: 7% 10%;
@@ -52,9 +53,61 @@ body{
 .banner h1{
   font-size: 50px;
 }
-
+.card_container{
+  margin-top: 2%;
+  padding:5%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card{
+  /* border-radius: 10px; */
+  height: 50vh;
+  width: 30vw;
+  margin-bottom: 12%;
+  box-shadow: 3px 8px 14px 5px rgba(0, 0, 0, 0.822);
+}
+.card_one{
+  background-image: linear-gradient(45deg,#F2D50F,#DA0641);
+}
+.card_two{
+  background-image: linear-gradient(45deg,#184E68,#57CA85);
+}
+.card_three{
+  background-image: linear-gradient(45deg,#62e7f1,#7d61c9);
+}
+.card_four{
+  background-image: linear-gradient(45deg,#7117ea,#ea6060);
+}
+.card_five{
+  background-image: linear-gradient(45deg,#c3ec52,#ea6060);
+}
+.card_six{
+  background-image: linear-gradient(45deg,#b1ea4d,#459522);
+}
+.card_anim{
+  animation: move 3s ease forwards;
+}
+.card_anim2{
+  animation: move2 3s ease forwards;
+}
+@keyframes move{
+  100%{
+    transform: translateX(120vw) translateY(-30vh);
+    opacity: 0;
+  }
+}
+@keyframes move2{
+  100%{
+    transform: translateX(60vw) translateY(-30vh);
+    opacity: 0;
+  }
+}
 /* Cards end */
 
+
+
+/* MEDIA QUERIES */
 @media (max-width:600px){
   .preloader img{
     height: 16vw;
@@ -76,5 +129,27 @@ body{
 @media (max-width:521px){
   .banner h1{
     line-height: 7.8vh;
+  }
+}
+@media (max-width:720px){
+  .card_container{
+    padding: 5% 0% 5% 0%;
+  }
+}
+@media (max-width:690px){
+  .card{
+    height: 45vh;
+  }
+}
+
+@media (max-width:610px){
+  .card_container{
+    flex-direction: column;
+  }
+  .card{
+    width: 60vw;
+    height: 40vh;
+    margin: auto;
+    margin-bottom: 7%;
   }
 }
