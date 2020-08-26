@@ -42,10 +42,8 @@ body{
 	font-size: 30px;
 	position: absolute;
 	top: 75%;
-	transform: translateY(-75%);
-	left: auto;
 	align-content: center;
-	color: white;
+	color: #eee;
 }
 .dragon{
 	height: 200px;

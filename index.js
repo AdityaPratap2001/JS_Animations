@@ -21,7 +21,7 @@ let cloud2 = document.querySelector('.cloud-2');
 let cloud3 = document.querySelector('.cloud-3');
 let dragon = document.querySelector('.dragon');
 
-var c_one_X = -2;
+let c_one_X = -2;
 setInterval(function(){
   cloud1.style.right = c_one_X + 'px'; 
   c_one_X = c_one_X + 3;
@@ -30,7 +30,7 @@ setInterval(function(){
   }
 },15)
 
-var c_two_X = -2;
+let c_two_X = -2;
 setInterval(function(){
   cloud2.style.right = c_two_X + 'px'; 
   c_two_X = c_two_X + 3;
@@ -39,7 +39,7 @@ setInterval(function(){
   }
 },10)
 
-var c_three_X = -2;
+let c_three_X = -2;
 setInterval(function(){
   cloud3.style.right = c_three_X + 'px'; 
   c_three_X = c_three_X + 3;
@@ -48,7 +48,7 @@ setInterval(function(){
   }
 },18)
 
-var xPos = -2;
+let xPos = -2;
 setInterval(function(){
   dragon.style.left = xPos + 'px'; 
   xPos = xPos + 3;
@@ -57,9 +57,9 @@ setInterval(function(){
   }
 },18)
 
-var yPos = 250;
-var moveUp = true;
-var moveDown = false;
+let yPos = 250;
+let moveUp = true;
+let moveDown = false;
 setInterval(function(){
   dragon.style.top =  yPos + 'px';
   if(moveUp){
@@ -97,9 +97,6 @@ let date = new Date();
 const options = {weekday:'long',year:'numeric',month:'long',day:'numeric'};
 dateSection.innerText = date.toLocaleDateString(undefined,options);
 
-let anim_loaded1 = false;
-let anim_loaded2 = false;
-let anim_loaded3 = false;
 
 // This function runs when user scrolls and 
 // the width of device is more than 610px 
@@ -113,36 +110,30 @@ function scrollDisappear(){
   if(card_top1 < 90){
     card1.classList.add('card_anim');
     card2.classList.add('card_anim2');
-    anim_loaded1 = true;
   }
   else if(card_top1 >= 90){
     card1.classList.remove('card_anim');
     card2.classList.remove('card_anim2');
-    anim_loaded1 = false;
   }
 
   // FOR CARD 3 & 4
   if(card_top2 < 90){
     card3.classList.add('card_anim');
     card4.classList.add('card_anim2');
-    anim_loaded2 = true;
   }
   else if(card_top2 >= 90){
     card3.classList.remove('card_anim');
     card4.classList.remove('card_anim2');
-    anim_loaded2 = false;
   }
   
   // FOR CARD 5 & 6
   if(card_top3 < 90){
     card5.classList.add('card_anim');
     card6.classList.add('card_anim2');
-    anim_loaded3 = true;
   }
   else if(card_top3 >= 90){
     card5.classList.remove('card_anim');
     card6.classList.remove('card_anim2');
-    anim_loaded3 = false;
   }
 }
 
