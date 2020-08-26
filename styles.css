@@ -73,23 +73,27 @@ body{
   justify-content: center;
   align-items: center;
   position: absolute;
+  transform: translateY(-100vh);
+  animation: popup_anim 1.5s ease forwards;
   top: 0;
   left: 0;
+}
+@keyframes popup_anim{
+  100%{
+    transform: translateY(0vh);
+  }
 }
 .popup{
   width: 50%;
   background-color: #eee;
   height: auto;
   padding: 3.7%;
+  padding-left: 5%;
   border-radius: 8px;
   position: relative;
 }
-.popup ul{
-  display: flex;
-  flex-direction: column;
-}
 .popup li{
-  margin: 2%;
+  margin: 1%;
 } 
 .popup i{
   position: absolute;
@@ -99,6 +103,11 @@ body{
 }
 .popup i:hover{
   transform: scale(1.2);
+}
+@media (max-width:516px){
+  .popup li{
+    font-size: 15px;
+  }
 }
 /* end of POPUP section */
 
