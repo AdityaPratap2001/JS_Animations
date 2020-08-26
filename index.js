@@ -79,6 +79,19 @@ setInterval(function(){
   }
 }, 6);
 
+// RESPONSIBLE FOR POPUP
+let btn = document.querySelector('.holiday_btn');
+let popup = document.querySelector('.popup_container')
+let close = document.querySelector('.close');
+btn.addEventListener('click',function(){
+  console.log('button clicked!');
+  document.documentElement.scrollTop = 0;
+  popup.style.display = 'flex';
+})
+close.addEventListener('click',function(){
+  popup.style.display = 'none';
+})
+
 // RESPONSIBLE FOR DISPLAYING DATE
 let date = new Date();
 const options = {weekday:'long',year:'numeric',month:'long',day:'numeric'};

@@ -64,6 +64,44 @@ body{
 }
 /* Preloader ends */
 
+/*  POPUP SECTION */ 
+.popup_container{
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(25, 39, 54, 0.774);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.popup{
+  width: 50%;
+  background-color: #eee;
+  height: auto;
+  padding: 3.7%;
+  border-radius: 8px;
+  position: relative;
+}
+.popup ul{
+  display: flex;
+  flex-direction: column;
+}
+.popup li{
+  margin: 2%;
+} 
+.popup i{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+.popup i:hover{
+  transform: scale(1.2);
+}
+/* end of POPUP section */
+
 /* Cards section */
 .banner{
   height: auto;
@@ -180,6 +218,18 @@ body{
 
 
 /* MEDIA QUERIES */
+@media (max-width:900px){
+  .popup{
+    width: 60%;
+    height: 65vh;
+  }
+}
+@media (max-width:480px){
+  .popup{
+    width: 80%;
+    height: 65vh;
+  }
+}
 @media (max-width:600px){
   .preloader img{
     height: 16vw;
