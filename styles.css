@@ -92,6 +92,9 @@ body{
   border-radius: 8px;
   position: relative;
 }
+.popup ul{
+  margin-top: 10px;
+}
 .popup li{
   margin: 1%;
 } 
@@ -122,6 +125,12 @@ body{
 }
 .banner h1{
   font-size: 50px;
+}
+.buckleup{
+  margin-top: 20px;
+}
+.buckleup span{
+  display: block;
 }
 .card_container{
   margin-top: 2%;
